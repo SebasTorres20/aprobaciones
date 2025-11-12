@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+.env
+*.log
+
+# Base de datos local
+*.sql
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

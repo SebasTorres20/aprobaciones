@@ -1,0 +1,208 @@
+/* ---------- VARIABLES GLOBALES ---------- */
+:root {
+  --primary-color: #0077ff;
+  --primary-light: #e7f0ff;
+  --success: #2ecc71;
+  --danger: #e74c3c;
+  --border-radius: 8px;
+  --bg-light: #f8f9fa;
+  --text-dark: #333;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- BASE ---------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ---------- SECCIONES ---------- */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+section {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* ---------- FORMULARIOS ---------- */
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005ed3;
+}
+
+/* ---------- LISTA DE SOLICITUDES ---------- */
+#requestsList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#requestsList li {
+  background: var(--primary-light);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#requestsList li:hover {
+  background: #dce9ff;
+}
+
+#requestsList strong {
+  display: inline-block;
+  color: var(--primary-color);
+}
+
+/* ---------- DETALLE ---------- */
+#detailBox {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#historyBox {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#historyBox h4 {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+#historyBox div {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 10px;
+  margin-bottom: 10px;
+  background: #f8f9ff;
+  border-radius: 4px;
+}
+
+#historyBox div strong {
+  color: var(--primary-color);
+}
+
+/* ---------- DECISIONES ---------- */
+#decision {
+  background-color: var(--primary-light);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-top: 15px;
+}
+
+#decision h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+#decision button {
+  margin-right: 8px;
+}
+
+#approveBtn {
+  background-color: var(--success);
+}
+
+#approveBtn:hover {
+  background-color: #28b463;
+}
+
+#rejectBtn {
+  background-color: var(--danger);
+}
+
+#rejectBtn:hover {
+  background-color: #c0392b;
+}
+
+/* ---------- MENSAJES ---------- */
+#createMsg {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

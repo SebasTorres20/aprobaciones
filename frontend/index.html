@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Flujo de Aprobaciones - Demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Flujo Genérico de Aprobación</h1>
+</header>
+
+
+<main>
+<section id="create">
+<h2>Crear Solicitud</h2>
+<form id="createForm">
+<label>Título: <input id="title" required></label>
+<label>Descripción: <textarea id="description"></textarea></label>
+<label>Solicitante: <select id="requester"></select></label>
+<label>Responsable (Aprobador): <select id="approver"></select></label>
+<label>Tipo: <select id="type"></select></label>
+<button type="submit">Crear solicitud</button>
+</form>
+<div id="createMsg"></div>
+</section>
+
+
+<hr>
+
+
+<section id="inbox">
+<h2>Bandeja (Simular aprover)</h2>
+<label>Ver bandeja de: <select id="inboxUser"></select></label>
+<button id="refreshInbox">Refrescar</button>
+<ul id="requestsList"></ul>
+</section>
+
+
+<section id="detail" hidden>
+<h2>Detalle</h2>
+<div id="detailBox"></div>
+<div id="historyBox"></div>
+<div id="decision">
+<h3>Tomar decisión</h3>
+<label>Usuario: <select id="decisionUser"></select></label>
+<label>Comentario: <textarea id="decisionComment"></textarea></label>
+<button id="approveBtn">Aprobar</button>
+<button id="rejectBtn">Rechazar</button>
+<button id="closeDetail">Cerrar</button>
+</div>
+</section>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
